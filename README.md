@@ -4,11 +4,15 @@
 
 ## LEARNING | [Udemy Course](https://www.udemy.com/course/mern-stack-front-to-back/)
 
-![app-image](./client/src/img/app-screenshot.png)
+![app-image](./images/app-screenshot.png)
 
 ## Purpose
 
 This application was created by [Brad Traversy](https://www.udemy.com/user/brad-traversy/). I completed this course to further my understanding of a MERN Full Stack Web Application.
+
+**_ UPDATE _**
+
+This is the backend portion of this [project](https://github.com/D-Whipp/mern-stack-bt). I've separated the frontend from the backend due to an employment method I've found.
 
 ## Technologies Used
 
