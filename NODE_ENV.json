@@ -1,1 +1,3 @@
-{}
+{
+  "production": "npm run server.js"
+}
