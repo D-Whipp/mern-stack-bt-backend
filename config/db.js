@@ -2,11 +2,13 @@ const mongoose = require('mongoose');
 const config = require('config');
 // const db = config.get('mongoURI');
 // const db = process.env.DATABASE_URL;
+const uname = process.env.uname;
+const dbpassword = process.env.dbpassword;
 const db =
   'mongodb+srv://' +
-  config.get('uname') +
+  uname +
   ':' +
-  config.get('dbpassword') +
+  dbpassword +
   '@devconnector.unlftvb.mongodb.net/?retryWrites=true&w=majority';
 
 console.log(db);
