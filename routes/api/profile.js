@@ -9,10 +9,13 @@ const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
 
+// Use url for deployed routes
+const url = 'https://bt-mern-behind.adaptable.app/';
+
 // @route    GET api/profile/me
 // @desc     Get current user's profile
 // @access   Private
-router.get('/me', auth, async (req, res) => {
+router.get(url + '/me', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({
       user: req.user.id,
@@ -115,7 +118,7 @@ router.post(
 // @route    GET api/profile
 // @desc     Get all profiles
 // @access   Public
-router.get('/', async (req, res) => {
+router.get(url + '/', async (req, res) => {
   try {
     const profiles = await Profile.find().populate('user', [
       'name',
