@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
 const config = require('config');
 // const db = config.get('mongoURI');
-const db = process.env.DATABASE_URL;
-// const uname = process.env.uname;
-// const dbpassword = process.env.dbpassword;
-// const db =
-//   'mongodb+srv://' +
-//   uname +
-//   ':' +
-//   dbpassword +
-//   '@devconnector.unlftvb.mongodb.net/?retryWrites=true&w=majority';
+// const db = process.env.DATABASE_URL;
+const uname = process.env.uname;
+const dbpassword = process.env.dbpassword;
+const db =
+  'mongodb+srv://' +
+  uname +
+  ':' +
+  dbpassword +
+  '@devconnector.unlftvb.mongodb.net/?retryWrites=true&w=majority';
 
-// mongoose.connect(db);
+mongoose.connect(db);
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
