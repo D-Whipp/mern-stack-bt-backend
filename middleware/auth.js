@@ -1,5 +1,5 @@
 // const jwt = require('jsonwebtoken');
-const jwt = process.env.jwtSecret('jsonwebtoken');
+const jwt = process.env.jwtSecret;
 const config = require('config');
 
 module.exports = function (req, res, next) {
