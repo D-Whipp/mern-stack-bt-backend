@@ -3,7 +3,7 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 const corsOptions = {
   origin: '*',
-  credentials: true,
+  // credentials: true,
   methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type'],
   exposedHeaders: ['Content-Type'],
