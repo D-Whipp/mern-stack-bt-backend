@@ -8,11 +8,14 @@ const config = require('config');
 const { check, validationResult } = require('express-validator');
 const User = require('../../models/User');
 
+// url for deployment
+const url = 'https://bt-mern-behind.adaptable.app/';
+
 // @route    POST api/users
 // @desc     Register user
 // @access   Public
 router.post(
-    '/',
+    url + '/',
     [
         check('name', 'Name is required').not().isEmpty(),
         check('email', 'Please enter a valid email').isEmail(),
@@ -33,11 +36,9 @@ router.post(
             let user = await User.findOne({ email });
 
             if (user) {
-                return res
-                    .status(400)
-                    .json({
-                        errors: [{ msg: 'User already exists' }],
-                    });
+                return res.status(400).json({
+                    errors: [{ msg: 'User already exists' }],
+                });
             }
 
             const avatar = gravatar.url(email, {
